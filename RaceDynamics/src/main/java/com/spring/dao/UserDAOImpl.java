@@ -26,13 +26,13 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 
-	public boolean saveUser(Users user) {
+	public boolean saveUser(Users users) {
 		
 		
 		try {
-			Session	session =sessionFactory.getCurrentSession();
+			Session	session =sessionFactory.openSession();
 			Transaction tx=session.beginTransaction();
-			session.saveOrUpdate(user);
+			session.saveOrUpdate(users);
 			tx.commit();
 			return true;
 		} catch (HibernateException e) {

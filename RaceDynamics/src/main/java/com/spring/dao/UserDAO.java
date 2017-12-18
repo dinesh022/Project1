@@ -5,7 +5,7 @@ import com.spring.model.Users;
 public interface UserDAO {
 	
 	
-	public boolean saveUser(Users user);
+	public boolean saveUser(Users users);
 	
 
 }

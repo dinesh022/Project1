@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.spring.test.UserTestCase
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.876 sec <<< FAILURE!
-com.spring.test.UserTestCase  Time elapsed: 0.876 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.037 sec <<< FAILURE!
+com.spring.test.UserTestCase  Time elapsed: 1.036 sec  <<< ERROR!
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDAOImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.spring.dao.UserDAOImpl.sessionFactory; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionFactory' defined in com.spring.config.DataBaseConfig: Unsatisfied dependency expressed through constructor argument with index 0 of type [javax.sql.DataSource]: : Error creating bean with name 'dataSource' defined in com.spring.config.DataBaseConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'getDataSource' threw exception; nested exception is java.lang.IllegalStateException: Could not load JDBC driver class [org.h2.Driver]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in com.spring.config.DataBaseConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'getDataSource' threw exception; nested exception is java.lang.IllegalStateException: Could not load JDBC driver class [org.h2.Driver]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1208)
@@ -81,7 +81,7 @@ Caused by: org.springframework.beans.BeanInstantiationException: Failed to insta
 Caused by: java.lang.IllegalStateException: Could not load JDBC driver class [org.h2.Driver]
 	at org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:130)
 	at com.spring.config.DataBaseConfig.getDataSource(DataBaseConfig.java:35)
-	at com.spring.config.DataBaseConfig$$EnhancerBySpringCGLIB$$195d88dd.CGLIB$getDataSource$2(<generated>)
+	at com.spring.config.DataBaseConfig$$EnhancerBySpringCGLIB$$195d88dd.CGLIB$getDataSource$3(<generated>)
 	at com.spring.config.DataBaseConfig$$EnhancerBySpringCGLIB$$195d88dd$$FastClassBySpringCGLIB$$6dd6289b.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:309)
